@@ -16,3 +16,5 @@
 // });
 
 Route::get('/', 'PostController@index');
+
+Route::get('/posts/create', 'PostController@show');
