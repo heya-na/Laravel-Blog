@@ -17,6 +17,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
+        //whenever the sidebar is loaded, make sure the archives variable is available on that page.
         view()->composer('layouts.sidebar', function($view){
             $view->with('archives', \App\Post::archives());
         });
