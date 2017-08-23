@@ -46,6 +46,7 @@ class PostController extends Controller
 
 		$post->save();
 
+        session()->flash('message', 'Your post has now been published!');
 		return redirect('/');
     }
 }

@@ -36,6 +36,9 @@ class RegistrationController extends Controller
         //Send a welcome email
         \Mail::to($user)->send(new Welcome($user));
 
+        //Flash back a message
+        session()->flash('message', 'Thank you so much for signing up!');
+
     	//Redirect
     	return redirect()->home();
     }
