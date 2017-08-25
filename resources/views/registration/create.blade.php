@@ -2,8 +2,9 @@
 
 @section('content')
 <div class="col-sm-8 blog-main">
-	<h1>Register</h1>
-
+	<div class="blog-header">
+		<h1>Register</h1>
+	</div>
 	<form method="POST" action="/register">
 		{{ csrf_field() }}
 
